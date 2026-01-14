@@ -40,7 +40,7 @@ export function GuestFeatures() {
                             className="text-4xl md:text-5xl lg:text-6xl font-medium text-primary leading-tight md:leading-[0.95]"
                             style={{ fontFamily: "var(--font-playfair)" }}
                         >
-                            <span className="italic">Partner</span>
+                            <span className="italic">Gutshof und Café</span>
                         </h2>
                         <p className="text-lg text-muted-foreground mt-6 max-w-2xl" style={{ fontFamily: "var(--font-inter)" }}>
                             Entdecken Sie unsere weiteren Betriebe – von einem traditionellem Hotel bis hin zum gemütlichem Café.
