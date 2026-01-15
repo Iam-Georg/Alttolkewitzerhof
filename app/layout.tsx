@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Idyllisch am Dresdner Elbufer gelegen – Ihr Hotel & Restaurant mit Charme. Komfortable Zimmer im Landhausstil, regionale Küche und perfekte Lage für Ausflüge.",
   keywords:
-    "Hotel Dresden, Restaurant Dresden, Elbufer, Elberadweg, Laubegast, Sächsische Schweiz, Übernachtung Dresden",
+    "Hotel Dresden, Restaurant Dresden, Elbufer, Elberadweg, Laubegast, Sächsische Schweiz, Übernachtung Dresden, Restaurant mit Terrasse, Landhausstil, Regionale Küche, Familienbetrieb, Ausflugsziel Dresden, Restaurant Dresden",
   openGraph: {
     title: "Alttolkewitzer Hof | Hotel & Restaurant Dresden",
     description: "Idyllisch am Dresdner Elbufer gelegen – Ihr Hotel & Restaurant mit Charme.",
@@ -36,19 +36,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
+        url: "/30095.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/30095.svg",
   },
 }
 
