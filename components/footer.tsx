@@ -7,7 +7,7 @@ import { ElbeWaves } from "./decorative-elements"
 const footerLinks = {
   hotel: [
     { name: "Zimmer & Preise", href: "/hotel" },
-    { name: "Online Buchen", href: "https://app.mews.com/distributor/275fe8d0-0c02-4602-aba7-b36f011bf606" },
+    { name: "Online Buchen", href: "https://app.mews.com/distributor/275fe8d0-0c02-4602-aba7-b36f011bf606", target: "_blank" },
     { name: "Fahrradvermietung", href: "/hotel#fahrrad" },
     { name: "Wissenswertes", href: "/info" },
   ],
@@ -101,9 +101,20 @@ export function Footer() {
             <ul className="space-y-2" style={{ fontFamily: "var(--font-inter)" }}>
               {footerLinks.hotel.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-background/60 hover:text-background transition-colors">
-                    {link.name}
-                  </Link>
+                  {link.target ? (
+                    <a
+                      href={link.href}
+                      target={link.target}
+                      rel="noopener noreferrer"
+                      className="text-sm text-background/60 hover:text-background transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-sm text-background/60 hover:text-background transition-colors">
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -116,7 +127,7 @@ export function Footer() {
             <ul className="space-y-2" style={{ fontFamily: "var(--font-inter)" }}>
               {footerLinks.restaurant.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-background/60 hover:text-background transition-colors">
+                  <Link href={link.href} className="text-sm _blank text-background/60 hover:text-background transition-colors">
                     {link.name}
                   </Link>
                 </li>

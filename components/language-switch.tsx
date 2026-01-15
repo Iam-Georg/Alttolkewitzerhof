@@ -46,14 +46,14 @@ export function LanguageSwitch() {
         <div className="flex items-center gap-2 text-sm">
             <button
                 onClick={() => setLanguage('de')}
-                className="whitespace-nowrap px-2 py-1 transition-colors hover:text-accent"
+                className="whitespace-nowrap cursor-pointer px-2 py-1 transition-colors hover:text-accent"
             >
                 DE
             </button>
             <span className="text-muted-foreground">|</span>
             <button
                 onClick={() => setLanguage('en')}
-                className="whitespace-nowrap px-2 py-1 transition-colors hover:text-accent"
+                className="whitespace-nowrap px-2 cursor-pointer py-1 transition-colors hover:text-accent"
             >
                 EN
             </button>
