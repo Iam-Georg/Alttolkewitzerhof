@@ -80,11 +80,6 @@ export function GuestFeatures() {
                                         {feature.description}
                                     </p>
                                 </div>
-
-                                {/* Hover Decoration */}
-                                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <HandDrawnCircle className="w-12 h-12 text-white" />
-                                </div>
                             </a>
                         </div>
                     ))}
@@ -93,7 +88,7 @@ export function GuestFeatures() {
                 {/* CTA */}
                 <div className="mt-16 text-center">
                     <p className="text-muted-foreground text-sm mb-4" style={{ fontFamily: "var(--font-inter)" }}>
-                        Mehr über unsere Partner erfahren
+                        Mehr über unsere Betriebe erfahren
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a

@@ -81,13 +81,14 @@ export default function KontaktPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-primary mb-1">Restaurant Öffnungszeiten</h3>
-                      <p className="text-muted-foreground text-sm">
-                        Mo–Do: 15:00–21:00 Uhr
-                        <br />
-                        Fr–Sa: 12:00–22:00 Uhr
-                        <br />
-                        So: 12:00–21:00 Uhr
-                      </p>
+                      <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-muted-foreground text-sm">
+                        <span className="w-fit">Mo–Do:</span>
+                        <span>15:00–21:00 Uhr</span>
+                        <span className="w-fit">Fr–Sa:</span>
+                        <span>12:00–22:00 Uhr</span>
+                        <span className="w-fit">So:</span>
+                        <span>12:00–21:00 Uhr</span>
+                      </div>
                     </div>
                   </div>
                 </div>
