@@ -35,7 +35,7 @@ export function HeroSection() {
               <span className="block italic text-center">Alttolkewitzer Hof</span>
             </h1>
             {/* Tagline with decorative line */}
-            <div className="flex flex-nowrap items-center justify-center gap-3 md:gap-4 mb-6 lg:mb-8">
+            <div className="hidden tablet:flex xl:flex flex-nowrap items-center justify-center gap-3 md:gap-4 mb-6 lg:mb-8">
               <div className="flex-1 min-w-[120px] h-px bg-white/50" />
               <p
                 className="text-white/70 text-xs sm:text-sm tracking-[0.1em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase"

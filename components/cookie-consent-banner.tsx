@@ -34,8 +34,8 @@ export function CookieConsentBanner({ onAccept, onDecline }: CookieConsentBanner
     }
 
     return (
-        <div className="fixed bottom-6 right-6 z-50 max-w-sm w-full">
-            <div className="bg-amber-50 border border-amber-200 shadow-lg">
+        <div className="fixed bottom-4 left-4 right-4 md:bottom-6 md:left-auto md:right-6 z-50 w-auto max-w-sm">
+            <div className="bg-amber-50/95 backdrop-blur-sm border border-amber-200 shadow-xl">
                 <div className="p-4">
                     <div className="flex items-start gap-3">
                         <Cookie className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
