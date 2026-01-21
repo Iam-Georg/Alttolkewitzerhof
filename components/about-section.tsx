@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { LeafDecoration, CornerFlourish } from "./decorative-elements"
 
 export function AboutSection() {
