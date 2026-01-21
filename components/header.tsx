@@ -45,7 +45,7 @@ export function Header() {
                 Hotel & Restaurant
               </span>
               <span
-                className={`text-lg sm:text-xl md:text-2xl lg:text-2xl font-medium tracking-wide transition-colors duration-300 ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}
+                className={`text-lg sm:text-l md:text-xl lg:text-2xl font-medium tracking-wide transition-colors duration-300 ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Alttolkewitzer Hof

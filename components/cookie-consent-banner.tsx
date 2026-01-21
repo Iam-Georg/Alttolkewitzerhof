@@ -35,7 +35,7 @@ export function CookieConsentBanner({ onAccept, onDecline }: CookieConsentBanner
 
     return (
         <div className="fixed bottom-4 left-4 right-4 md:bottom-6 md:left-auto md:right-6 z-50 w-auto max-w-sm">
-            <div className="bg-amber-50/95 backdrop-blur-sm border border-amber-200 shadow-xl">
+            <div className="bg-white border-1 border-white/60 shadow-xl">
                 <div className="p-4">
                     <div className="flex items-start gap-3">
                         <Cookie className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -56,7 +56,7 @@ export function CookieConsentBanner({ onAccept, onDecline }: CookieConsentBanner
                                 </button>
                                 <button
                                     onClick={handleDecline}
-                                    className="bg-transparent text-amber-700 border border-amber-300 px-3 py-1.5 text-xs font-medium hover:bg-amber-100 transition-colors cursor-pointer"
+                                    className="bg-transparent text-amber-700 border border-amber-700 px-3 py-1.5 text-xs font-medium hover:bg-amber-700/25 transition-colors cursor-pointer"
                                 >
                                     Ablehnen
                                 </button>
