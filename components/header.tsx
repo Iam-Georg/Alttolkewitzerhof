@@ -21,10 +21,17 @@ export function Header() {
   const isHomePage = pathname === "/"
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 50)
+          ticking = false
+        })
+        ticking = true
+      }
     }
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -53,7 +60,7 @@ export function Header() {
               </span>
               {/* SVG Logo */}
 
-            </div>
+            </div> 
             {/* Handgezeichnete Unterstreichung */}
             {/*<svg
               className={`absolute -bottom-1 left-0 w-full h-2 transition-opacity duration-300 ${scrolled || !isHomePage ? "text-accent opacity-100" : "text-white opacity-60"}`}

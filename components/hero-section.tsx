@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { HandDrawnArrow, CornerFlourish, StarBurst } from "./decorative-elements"
 
 export function HeroSection() {
@@ -13,11 +14,12 @@ export function HeroSection() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          //src="/placeholder.svg?height=1080&width=1920"
+        <Image
           src="/img/alttolkewitzer-hof-nacht.jpg"
           alt="Alttolkewitzer Hof - Front"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
       </div>
