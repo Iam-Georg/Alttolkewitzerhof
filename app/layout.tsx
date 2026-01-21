@@ -60,22 +60,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.addEventListener('load', function() {
-                setTimeout(function() {
-                  function googleTranslateElementInit() {
-                    new google.translate.TranslateElement(
-                      {
-                        pageLanguage: 'de',
-                        includedLanguages: 'en',
-                        autoDisplay: false
-                      },
-                      'google_translate_element'
-                    );
-                  }
-                  var script = document.createElement('script');
-                  script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-                  script.async = true;
-                  document.head.appendChild(script);
-                }, 2000); // Delay loading by 2 seconds
+                function googleTranslateElementInit() {
+                  new google.translate.TranslateElement(
+                    {
+                      pageLanguage: 'de',
+                      includedLanguages: 'en',
+                      autoDisplay: false
+                    },
+                    'google_translate_element'
+                  );
+                }
+                var script = document.createElement('script');
+                script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                script.async = true;
+                document.head.appendChild(script);
               });
             `,
           }}
