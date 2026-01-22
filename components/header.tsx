@@ -59,7 +59,7 @@ export function Header() {
                 <div className={`w-full h-px bg-current tracking-wide transition-colors duration-300 ${scrolled || !isHomePage ? "text-primary" : "text-white"}`} />
               </span>
               {/* SVG Logo */}
-
+            
             </div> 
             {/* Handgezeichnete Unterstreichung */}
             {/*<svg

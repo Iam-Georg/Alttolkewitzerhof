@@ -37,7 +37,7 @@ export function HeroSection() {
               <span className="block italic text-center">Alttolkewitzer Hof</span>
             </h1>
             {/* Tagline with decorative line */}
-            <div className="hidden md:flex xl:flex flex-nowrap items-center justify-center gap-3 md:gap-4 mb-6 lg:mb-8">
+            <div className="hidden xl:flex flex-nowrap items-center justify-center gap-3 md:gap-4 mb-6 lg:mb-8">
               <div className="flex-1 min-w-[120px] h-px bg-white/50" />
               <p
                 className="text-white/70 text-xs sm:text-sm tracking-[0.1em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase"
@@ -74,14 +74,6 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator - Tablet & Desktop */}
-      <div className="hidden md:flex absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2">
-        <span className="text-white/50 text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-inter)" }}>
-          Entdecken
-        </span>
-        <div className="w-px h-10 md:h-12 bg-gradient-to-b from-white/50 to-transparent" />
       </div>
     </section>
   )

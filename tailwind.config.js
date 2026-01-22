@@ -11,7 +11,7 @@ module.exports = {
         screens: {
             sm: '640px',
             md: '768px',
-            lg: { 'raw': '(min-width: 1024px) and (min-height: 900px)' },
+            lg: '1024px',
             xl: '1280px',
         }
     },
