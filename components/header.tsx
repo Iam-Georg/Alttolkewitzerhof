@@ -52,7 +52,7 @@ export function Header() {
                 Hotel & Restaurant
               </span>
               <span
-                className={`text-md md:text-xl lg:text-2xl font-medium tracking-wide transition-colors duration-300 ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}
+                className={`text-md tablet:text-sm md:text-xl lg:text-2xl font-medium tracking-wide transition-colors duration-300 ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Alttolkewitzer Hof
@@ -72,8 +72,8 @@ export function Header() {
 
           </Link>
 
-          {/* Desktop Navigation - Ab lg Breakpoint sichtbar */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Desktop Navigation - Ab xl Breakpoint sichtbar */}
+          <div className="hidden xl:flex items-center gap-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -106,20 +106,25 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            className={`lg:hidden p-2 transition-colors ${scrolled || !isHomePage ? "text-foreground" : "text-white"}`}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile menu button and language switch */}
+          <div className="xl:hidden flex items-center gap-2">
+            <div className={`${scrolled || !isHomePage ? "text-foreground" : "text-white"}`}>
+              <LanguageSwitch />
+            </div>
+            <button
+              type="button"
+              className={`p-2 transition-colors ${scrolled || !isHomePage ? "text-foreground" : "text-white"}`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation - Fullscreen overlay */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-background">
+          <div className="xl:hidden fixed inset-0 z-50 bg-background">
             <div className="flex flex-col h-full">
               {/* Mobile menu header with close button */}
               <div className="flex items-center justify-between p-4 lg:px-6 border-b border-border/50">

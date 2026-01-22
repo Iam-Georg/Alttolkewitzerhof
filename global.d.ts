@@ -11,3 +11,22 @@ declare module '*.css' {
     export default unknown
 }
 
+// Google Translate API types
+declare global {
+    interface Window {
+        google?: {
+            translate: {
+                TranslateElement: new (
+                    config: {
+                        pageLanguage: string
+                        includedLanguages: string
+                        autoDisplay: boolean
+                    },
+                    elementId: string
+                ) => void
+            }
+        }
+        googleTranslateElementInit?: () => void
+    }
+}
+

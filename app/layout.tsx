@@ -4,6 +4,7 @@ import { Playfair_Display, Inter, Caveat } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 import { ClientLayout } from "@/components/client-layout"
+import { GoogleTranslate } from "@/components/google-translate"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -53,31 +54,10 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              function googleTranslateElementInit() {
-                new google.translate.TranslateElement(
-                  {
-                    pageLanguage: 'de',
-                    includedLanguages: 'en',
-                    autoDisplay: false
-                  },
-                  'google_translate_element'
-                );
-              }
-              var script = document.createElement('script');
-              script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-              script.async = false;
-              document.head.appendChild(script);
-            `,
-          }}
-        />
       </head>
       <body className={`${playfair.variable} ${inter.variable} ${caveat.variable} font-sans antialiased`}>
         <ClientLayout>{children}</ClientLayout>
-        {/* Hidden Google Translate element container */}
-        <div id="google_translate_element" style={{ display: 'none' }} />
+        <GoogleTranslate />
       </body>
     </html>
   )
